@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Page with Flourish Graphics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My GitHub Page</h1>
+    <p>This page showcases embedded graphics from Flourish.</p>
+
+    <!-- Embedding a Flourish Graphic -->
+    <iframe 
+        src="https://public.flourish.studio/visualisation/1234567/embed" 
+        title="Flourish Graphic"></iframe>
+
+    <!-- Another Flourish Graphic -->
+    <iframe 
+        src="https://public.flourish.studio/visualisation/7654321/embed" 
+        title="Another Flourish Graphic"></iframe>
+
+    <!-- Button to Download Page as PDF -->
+    <button id="downloadBtn">Download as PDF</button>
+
+    <script>
+        // JavaScript to generate a PDF of the page
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const element = document.body; // Target the entire body for PDF
+            const options = {
+                filename: 'GitHub_Page.pdf',
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(options).from(element).save();
+        });
+    </script>
+</body>
+</html>
