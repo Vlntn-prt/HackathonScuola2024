@@ -25,18 +25,6 @@
         nav a:hover {
             background-color: #575757;
         }
-    </style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Page with Flourish Graphics</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
         iframe {
             border: none;
             width: 100%;
@@ -56,9 +44,43 @@
         button:hover {
             background-color: #45a049;
         }
+        .container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
+        .link-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .link-button:hover {
+            background-color: #45a049;
+        }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Quiz.html">Take our quiz!</a>
+        <a href="Discover our data.html">Discover the data</a>
+        <a href="Info.html">Info</a>
+    </nav>
+    <div class="container">
+        <img src="LOGO_hak.jpg" alt="Logo" class="logo">
+        <h1 class="headline">Take the quiz and discover your soft skills!</h1>
+        <a href="https://example.com" target="_blank" class="link-button">Start the Quiz</a>
+    </div>
+
     <h1>Welcome to My GitHub Page</h1>
     <p>This page showcases embedded graphics from Flourish.</p>
 
@@ -87,17 +109,5 @@
         });
     </script>
 </body>
-<body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="Quiz.html">Take our quiz!</a>
-        <a href="Discover our data.html">Discover the data</a>
-        <a href="Info.html">Info</a>
-    </nav>
-    <div class="container">
-        <img src="LOGO_hak.jpg" alt="Logo" class="logo">
-        <h1 class="headline">Take the quiz and discover your soft skills!</h1>
-        <a href="https://example.com" target="_blank" class="link-button">Start the Quiz</a>
-    </div>
-</body>
 </html>
+
